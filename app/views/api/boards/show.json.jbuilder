@@ -2,3 +2,6 @@
 # it should include the board
 #  - its lists
 #    - the cards for each list
+  json.array!(@board.lists) do |list|
+    json.(list, :title, :ord, :cards)
+  end
